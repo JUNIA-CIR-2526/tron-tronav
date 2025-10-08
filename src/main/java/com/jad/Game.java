@@ -1,5 +1,6 @@
 package com.jad;
 
+import com.jad.light_cycle.LightCycle;
 import com.jad.textwindow.TextWindow;
 
 public class Game {
@@ -12,9 +13,7 @@ public class Game {
 
     public Game(int nbMotos, TextWindow textWindow) {
         for (int i = 0; i < nbMotos; i++) {
-            if (motos != null) {
-                motos[i] = new LightCycle(0, 0);
-            }
+            motos[i] = new LightCycle(0, 0);
         }
         grid = new Grid(GRID_WIDTH, GRID_HEIGHT);
         this.textWindow = textWindow;
@@ -23,7 +22,7 @@ public class Game {
 
     public void iteration() {
         for (LightCycle moto : motos) {
-            moto.move;
+            moto.move();
         }
     }
 

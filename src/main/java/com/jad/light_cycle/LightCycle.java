@@ -1,9 +1,11 @@
 package com.jad.light_cycle;
 
+import com.jad.Grid;
+
 import java.util.Random;
 
 public class LightCycle {
-    private static int SPEED = 1;
+    private static final int SPEED = 1;
     Position position;
     boolean destroyed = false;
     int[] direction;
@@ -56,6 +58,6 @@ public class LightCycle {
     public void move() {
         position.setX(position.getX() + this.direction[0] * SPEED);
         position.setY(position.getY() + this.direction[1] * SPEED);
-        position.correctPosition(grid.getWidth(), grid.getHeight);
+        position.correctPosition(grid.getWidth(), grid.getHeight());
     }
 }
